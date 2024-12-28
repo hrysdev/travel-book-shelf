@@ -19,7 +19,7 @@ jobs:
         run: |
           volta install node
           volta install pnpm
-          pnpm install && pnpm build
+          pnpm install && pnpm run build
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
