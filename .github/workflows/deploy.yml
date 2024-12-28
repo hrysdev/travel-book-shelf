@@ -15,13 +15,8 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v4
 
-      - name: Install Dependencies
-        run: |
-          volta install node
-          volta install pnpm
-          pnpm install
-
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          packageManager: pnpm
