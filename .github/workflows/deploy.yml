@@ -20,6 +20,10 @@ jobs:
           volta install node
           volta install pnpm
 
+      - name: aaa
+        run: |
+          pnpm --version
+
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
