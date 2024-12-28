@@ -16,7 +16,7 @@ jobs:
         uses: volta-cli/action@v4
 
       - name: Install Dependencies
-        run: pnpm run build
+        run: volta install pnpm && pnpm run build
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
