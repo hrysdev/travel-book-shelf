@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import { Provider } from "@/components/ui/provider";
-import { ColorModeProvider } from "@/components/ui/color-mode";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
@@ -22,9 +21,7 @@ export default function RootLayout({
   return (
     <html lang="ja" suppressHydrationWarning>
       <body className={`${notoSansJP.className}`}>
-        <Provider>
-          <ColorModeProvider>{children}</ColorModeProvider>
-        </Provider>
+        <Provider>{children}</Provider>
       </body>
     </html>
   );
