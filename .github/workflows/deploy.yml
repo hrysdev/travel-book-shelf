@@ -21,10 +21,14 @@ jobs:
           volta install pnpm
           pnpm install
 
+      - name: Confirm Versions
+        run: |
+          volta --version
+          node --version
+          pnpm --version
+
       - name: Build
         run: pnpm run build
-
-      - run: echo ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
