@@ -15,13 +15,8 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v4
 
-      - name: Install Dependencies
+      - name: Version Check
         run: |
-          pnpm install
-
-      - name: Confirm Versions
-        run: |
-          volta --version
           node --version
           pnpm --version
 
