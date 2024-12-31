@@ -17,8 +17,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          volta install node
-          volta install pnpm
+          volta install
           pnpm install
 
       - name: Confirm Versions
